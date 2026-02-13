@@ -522,23 +522,6 @@ A diferencia de herramientas puramente automáticas, este framework separa la ej
 ![Diagrama de Arquitectura](diagrama.jpg)
 
 
-===========================================================================
-
-## Estructura del Framework
-
-Framework_QA/               # Directorio raíz del framework de Quality Assurance (QA).
-│
-│--data.py                  # Archivo encargado de la gestión de datos de prueba.
-│--locust_web.py            # Archivo principal de definición de usuarios y tareas de Locust.
-│--main.py                  # Punto de entrada del framework.
-│--README.md                # Documento de referencia principal del proyecto.
-│--requirements.txt         # Archivo que lista las dependencias necesarias para ejecutar el framework.
-│--setup.py                 # Archivo de configuración para empaquetar e instalar el framework como un módulo de Python.
-
-
-===========================================================================
-
-
 ## Capacidad del Framework
 
 
@@ -591,7 +574,7 @@ El sistema cuenta con un menú interactivo con tres opciones claras:
 ### 1. Modo CARGA (Load Testing)
 * **Acción:** Ejecuta ataques HTTP reales.
 * **Objetivo:** Validar estabilidad bajo tráfico.
-* **Métrica:** Verifica que el tiempo de respuesta sea **< 5 segundos (P95)**.
+* **Métrica:** Verifica que el tiempo de respuesta sea **< 2 segundos (P95)**.
 * **Resultado:** Genera reporte HTML/CSV.
 
 ### 2. Modo ESTRÉS (Stress Testing)
@@ -648,7 +631,7 @@ En la parte final del HTML aparece un veredicto o resumen de la prueba realizada
 
 3. 95th Percentile (P95) Response Time: El tiempo que tardan el 95% de los usuarios.
 
-   * En LLMs, esto suele ser alto (1-3 segundos). Si supera los 10 segundos, la experiencia de usuario es mala.
+   * En LLMs, esto suele ser alto (1-3 segundos). Si supera los 15 segundos, la experiencia de usuario es mala.
 
    
 ===========================================================================
