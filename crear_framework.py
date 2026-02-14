@@ -433,7 +433,14 @@ def ejecutar_prueba():
         # 3. Recolección de parámetros de prueba
         endpoint = input(" Ingresa el Endpoint URL: ").strip()
         users = int(input(" Cantidad de usuarios: ").strip())
-        duration = 60
+        
+        if tipo == "2": # Si es ESTRÉS
+            duration = 120
+            print(f"⏱️  Configuración de ESTRÉS detectada: Duración establecida en {duration}s")
+
+        else: # Si es CARGA (1) o SEGURIDAD (3)
+            duration = 60
+            print(f"⏱️  Configuración estándar: Duración establecida en {duration}s")
 
         # if tipo == "1":
         #     sla_valor = input("Tiempo de carga máximo aceptable (SLA) en segundos: ").strip()
